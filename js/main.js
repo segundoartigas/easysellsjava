@@ -20,7 +20,7 @@ else {
     alert("genial puedes comprar lo que desees")
 }
 let cel = prompt("te daremos informacion acerca de nuestros celulares, reponde ok para ver la info.");
-
+// Clase para tirar alerts de lo que hace el celular.
 class Celular{
     constructor(color,peso,modelo,ram,rdc){
         this.color = color;
@@ -54,3 +54,25 @@ celular1 = new Celular("azul","5 pulgadas","iphone 12","64 gb","100px");
 celular1.PresionarBotonEncendido();
 celular1.Reiniciar();
 celular1.grabarVideo();
+
+//Arrancan los eventos, sirven en el comprar de las tarjetas.
+let button = document.getElementById("compra");
+button.addEventListener("click", respuestaClick);
+function respuestaClick() {
+    console.log("Primer respuesta");
+    alert("Seleccionaste la compra del iphone 12 pro max.")
+
+let button2 = document.getElementById("heladera");
+button2.addEventListener("click", respuestaClick);
+function respuestaClick() {
+    console.log("Segunda respuesta");
+    alert("Seleccionaste la compra de la heladera patrick.")
+
+let button3 = document.getElementById("bmw");
+button3.addEventListener("click", respuestaClick);
+function respuestaClick() {
+    console.log("Tercer respuesta");
+    alert("Seleccionaste la compra del auto bmw m3 0km.")
+}
+}
+}
