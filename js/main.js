@@ -76,3 +76,51 @@ function respuestaClick() {
 }
 }
 }
+//Usando dom y sus clases
+let barra = document.getElementsByClassName("barra");
+console.log(barra[0].innerHTML);
+console.log(barra[1].innerHTML);
+console.log(barra[2].innerHTML);
+console.log(barra[3].innerHTML);
+
+
+let body = document.getElementById("grid-container");
+let header = document.getElementById("header");
+let navbar = document.getElementById("navbar");
+let main = document.getElementById("contenido");
+let oferta = document.getElementById("oferta");
+console.log(body.innerHTML);
+console.log(header.innerHTML);
+console.log(navbar.innerHTML);
+console.log(main.innerHTML);
+console.log(oferta.innerHTML);
+
+//Utilizando local storage y guardando datos.
+localStorage.setItem("Bienvenidos", "En easysells, nos contactamos con vos para hacer de tu compra o venta un experiencia simple y rapida.");
+
+let mensaje_local = localStorage.getItem("Bienvenidos");
+console.log(mensaje_local);
+alert("el valor que guarde es: " +localStorage.getItem("esValido"))
+
+//session storage: guardar datos
+sessionStorage.setItem("Acerca de nosotros", "En easysells, nos contactamos con vos para hacer de tu compra o venta un experiencia simple y rapida.");
+
+//recuperando datos
+let mensaje_session = sessionStorage.getItem("Acerca de nosotros");
+console.log(mensaje_session);
+
+//json
+const primerProducto = {id:2, producto:"computadora"};
+localStorage.setItem("primerProducto", primerProducto);
+let producto_local = localStorage.getItem("primerProducto");
+console.log(producto_local.producto);
+
+const enJson = JSON.stringify(primerProducto);
+console.log(enJson);
+console.log(typeof primerProducto);
+console.log(typeof enJson);
+
+localStorage.setItem("primerProducto", enJson);
+localStorage.setItem("primerProducto", JSON.stringify(primerProducto));
+
+
