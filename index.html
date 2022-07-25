@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Easy sell's</title>
     <link rel="stylesheet" type="text/css" href="./style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!--iconos-->
     <script src="https://kit.fontawesome.com/5aadf441d1.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body id="grid-container">
     <header id="header">
@@ -36,22 +37,39 @@
                 <h3>Iphone 12 pro max</h3>
                 <p>Iphone 128 gb nuevo en caja con todos sus accesorios. Viene con auriruclares y cargador usb mas
                     ficha tecnica con memoria ram limitada.</p>
-                <button id="compra">Comprar</button>
+                <input type="button" id="compra" value="Comprar">
             </div>
             <div class="tarjeta">
                 <img src="./img/hel.png">
                 <h3>Heladera patrick</h3>
                 <p>heladera con freezer y refrigeracion automatica. Con pantalla tactil modificable en base a la
                     electricidad,frio y potencia electrica.</p>
-                <button id="heladera">Comprar</button>
+                <input type="button" id="compra" value="Comprar">
             </div>
             <div class="tarjeta">
                 <img src="./img/bmw.jpg">
                 <h3>Bmw m3 0km</h3>
                 <p>bmw año 2022 con velocidad maxima de 280km/hora, con motor de potencia de 500 caballos de fuerza y asientos de cuero y calefaccion con 3 volumenes.</p>
-                <button id="bmw">Comprar</button>
+                <input type="button" id="compra" value="Comprar">
             </div>
           
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row"></main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                    <button id="boton-pagar" class="btn btn-danger">Pagar</button>
+                </aside>
+            </div>
         </div>
 
     </main>
@@ -88,8 +106,8 @@
 
     
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
