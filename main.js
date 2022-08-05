@@ -7,13 +7,13 @@ function respuestaClick() {
     swal("Perfecto, seleccionaste el iphone!!", "hecho");
 
 
-let button2 = document.getElementById("compra");
+let button2 = document.getElementById("compra2");
 button2.addEventListener("click", respuestaClick);
 function respuestaClick() {
     console.log("Segunda respuesta");
     swal("Perfecto, seleccionaste la heladera!!", "hecho");
 
-let button3 = document.getElementById("compra");
+let button3 = document.getElementById("compra3");
 button3.addEventListener("click", respuestaClick);
 function respuestaClick() {
     console.log("Tercer respuesta");
@@ -196,20 +196,58 @@ fetch("https://reqres.in/api/users",{
 .then(res=>console.log(res))
 
 //productos json
-fetch('js/productos.json')
-.then((Response) => Response.json())
-.then((data) => {
-    let div_padre = document.createElement("div");
-    div_padre.className = "card";
-    let div_hijo1 = document.createElement("div");
-    div_hijo1.className = "card-header";
-    let div_hijo2 = document.createElement("div");
-    div_hijo2.className = "card-body";
-    let parrafo = document.createElement("p");
-    div_hijo1.innerHTML = '${valor.nombre} <b>($${valor.precio})</b>';
-    parrafo.innerText = valor.descripcion;
-    div_hijo2.appendChild(parrafo);
-    div_padre.appendChild(div_hijo1);
-    div_padre.appendChild(div_hijo2);
-    resultado.appendChild(div_padre);
-})
+// fetch('./productos.json')
+// .then((response) => response.json())
+// .then((data) => {
+//     const resultado = document.getElementById("resultado");
+//     data.forEach(valor =>{
+//         let div_padre = document.createElement("div");
+//         div_padre.className = "card";
+//         let div_hijo1 = document.createElement("div");
+//         div_hijo1.className = "card-header";
+//         let div_hijo2 = document.createElement("div");
+//         div_hijo2.className = `card-body`;
+//         let parrafo = document.createElement("p");
+//         div_hijo1.innerHTML = `${valor.nombre} <b>($${valor.precio})</b>`;
+//         parrafo.innerText = valor.descripcion;
+//         div_hijo2.appendChild(parrafo);
+//         document.body.append(div_padre);
+//         div_padre.appendChild(div_hijo2);
+//         resultado.appendChild(div_padre);
+//     })
+    
+// }).catch(error => console.log("fallo!"));
+
+
+async function obtenerJSON() {
+    const URLJSON = "/productos.json";
+    const respuesta = await fetch(URLJSON);
+    const data = await respuesta.json();
+    return respuesta;
+}
+
+obtenerJSON().then(data => {
+    const resultado = document.getElementById("resultado");
+    data.forEach(valor =>{
+        console.log("GANGSTERRRR", valor)
+        let div_padre = document.createElement("div");
+        div_padre.className = "card";
+        let div_hijo1 = document.createElement("div");
+        div_hijo1.className = "card-header";
+        let div_hijo2 = document.createElement("div");
+        div_hijo2.className = `card-body`;
+        let parrafo = document.createElement("p");
+        div_hijo1.innerHTML = `${valor.nombre} <b>($${valor.precio})</b>`;
+        parrafo.innerText = valor.descripcion;
+        div_hijo2.appendChild(parrafo);
+        document.body.append(div_padre);
+        div_padre.appendChild(div_hijo2);
+        resultado.appendChild(div_padre);
+    })
+}).catch(error => console.log("fallo!"));
+// const getJSON = async () => {
+//     json = await obtenerJSON()
+//     console.log("gangster", json)
+// }
+
+// getJSON();
