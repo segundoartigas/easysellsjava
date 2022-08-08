@@ -1,7 +1,0 @@
-[
-    {"id":1, "nombre":"Samsung galaxy", "descripcion":"128 gb de ram con cargador, funda y auriculares.", "imagen":"", "precio":90.000},
-    {"id":2, "nombre":"Ventilador", "descripcion":"Con potencia angular, con tres tipos de niveles distintos.", "imagen":"", "precio":20.000},
-    {"id":3, "nombre":"Horno", "descripcion":"Con potencia de 400 grados, con 4 hornallas y gas automatico.", "imagen":"", "precio":30.000},
-    {"id":4, "nombre":"Audi a4", "descripcion":"Con velocidad maxima de 350 km/hora, de color blanco blindado.", "imagen":"", "precio":200.000},
-    {"id":5, "nombre":"Hilux", "descripcion":"Con velocidad maxima de 220 km/hora de color rojo y con caja de sexta.", "imagen":"", "precio":100.000}
-]
